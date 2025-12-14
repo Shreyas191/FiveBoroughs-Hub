@@ -1,10 +1,10 @@
-# 🚅 TransitHub AI (RailPulse)
+# 🚅 FiveBoroughs-Hub
 
 **The smartest way to navigate the NYC Subway.**
 
-TransitHub AI serves as your intelligent companion for the New York City transit system. Merging real-time data with AI-powered assistance, it provides a seamless, modern, and accessible experience for daily commuters and tourists alike.
+FiveBoroughs-Hub serves as your intelligent companion for the New York City transit system. Merging real-time data with AI-powered assistance, it provides a seamless, modern, and accessible experience for daily commuters and tourists alike.
 
-![TransitHub AI Dashboard](./frontend/public/vite.svg) *Add a screenshot here*
+![FiveBoroughs-Hub Dashboard](./frontend/public/vite.svg) *Add a screenshot here*
 
 ## ✨ Features
 
