@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Ultra-Premium Dark Theme Palette */
+  --bg-app: #09090b;
+  /* Zinc 950 */
+  --bg-card: #18181b;
+  /* Zinc 900 */
+  --bg-card-hover: #27272a;
+  /* Zinc 800 */
+
+  --border-subtle: #27272a;
+  /* Zinc 800 */
+  --border-highlight: #3f3f46;
+  /* Zinc 700 */
+
+  --text-main: #fafafa;
+  /* Zinc 50 */
+  --text-scnd: #a1a1aa;
+  /* Zinc 400 */
+  --text-muted: #71717a;
+  /* Zinc 500 */
+
+  --primary: #3b82f6;
+  /* Blue 500 */
+  --primary-glow: rgba(59, 130, 246, 0.5);
+
+  --success: #10b981;
+  /* Emerald 500 */
+  --warning: #f59e0b;
+  /* Amber 500 */
+  --danger: #ef4444;
+  /* Red 500 */
+
+  /* Transit Lines */
+  --line-123: #EE352E;
+  --line-456: #00933C;
+  --line-7: #B933AD;
+  --line-ACE: #0039A6;
+  --line-BDFM: #FF6319;
+  --line-G: #6CBE45;
+  --line-JZ: #996633;
+  --line-L: #A7A9AC;
+  --line-NQRW: #FCCC0A;
+  --line-S: #808183;
+}
+
+body {
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-app);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-highlight);
+  border-radius: 5px;
+  border: 2px solid var(--bg-app);
+}
+
+/* Card Utility */
+.card-base {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 0.75rem;
+  /* 12px */
+  transition: all 0.2s ease-in-out;
+}
+
+.card-base:hover {
+  border-color: var(--border-highlight);
+  background-color: var(--bg-card-hover);
+}
+
+/* Glass-like header (more subtle) */
+.glass-nav {
+  background: rgba(9, 9, 11, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-enter {
+  animation: slideUp 0.4s ease-out forwards;
+}

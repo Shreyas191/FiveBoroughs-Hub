@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NYC Transit Assistant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <h1>🚇 NYC Transit Assistant</h1>
+            <p>Ask me about trains, buses, alerts, and elevator availability</p>
+            <p class="voice-support-note">💡 Voice input available - click the microphone button!</p>
+        </div>
+        
+        <div class="chat-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>Hello! I'm your NYC Transit assistant. I can help you with:</p>
+                    <ul>
+                        <li>Real-time train arrivals (e.g., "When is the next N train from 59th St?")</li>
+                        <li>Service alerts and delays</li>
+                        <li>Elevator availability (e.g., "Is there an elevator at 95th St?")</li>
+                        <li>General transit information</li>
+                    </ul>
+                    <p><strong>Try voice input!</strong> Click the 🎤 microphone button and speak your question.</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="chat-input-container">
+            <button id="voiceButton" class="voice-button" title="Click to speak">
+                <span class="mic-icon">🎤</span>
+            </button>
+            <input 
+                type="text" 
+                id="userInput" 
+                placeholder="Ask about NYC transit or click 🎤 to speak..."
+                autocomplete="off"
+            >
+            <button id="sendButton">Send</button>
+        </div>
+        
+        <div id="voiceStatus" class="voice-status hidden">
+            <span class="pulse-dot"></span>
+            <span class="status-text">Listening...</span>
+        </div>
+        
+        <div id="browserWarning" class="browser-warning hidden">
+            ⚠️ Voice input is not supported in your browser. Please use Chrome, Edge, or Safari.
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/chat.js') }}"></script>
+</body>
+</html>

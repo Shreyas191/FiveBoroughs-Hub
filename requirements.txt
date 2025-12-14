@@ -1,0 +1,12 @@
+flask==3.0.0
+flask-cors==4.0.0
+requests==2.31.0
+protobuf==4.25.1
+google-generativeai==0.3.2
+python-dotenv==1.0.0
+gtfs-realtime-bindings==1.0.0
+rapidfuzz==3.10.1
+
+langchain==0.3.7
+langchain-google-genai==2.0.0
+langchain-core==0.3.1

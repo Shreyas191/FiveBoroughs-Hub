@@ -1,0 +1,27 @@
+{
+  "routes": {
+    "1": {"color": "#EE352E", "name": "Broadway-7th Ave Local", "type": "subway"},
+    "2": {"color": "#EE352E", "name": "7th Ave Express", "type": "subway"},
+    "3": {"color": "#EE352E", "name": "7th Ave Express", "type": "subway"},
+    "4": {"color": "#00933C", "name": "Lexington Ave Express", "type": "subway"},
+    "5": {"color": "#00933C", "name": "Lexington Ave Express", "type": "subway"},
+    "6": {"color": "#00933C", "name": "Lexington Ave Local", "type": "subway"},
+    "7": {"color": "#B933AD", "name": "Flushing Local", "type": "subway"},
+    "A": {"color": "#0039A6", "name": "8th Ave Express", "type": "subway"},
+    "B": {"color": "#FF6319", "name": "6th Ave Express", "type": "subway"},
+    "C": {"color": "#0039A6", "name": "8th Ave Local", "type": "subway"},
+    "D": {"color": "#FF6319", "name": "6th Ave Express", "type": "subway"},
+    "E": {"color": "#0039A6", "name": "8th Ave Local", "type": "subway"},
+    "F": {"color": "#FF6319", "name": "Queens Blvd Express", "type": "subway"},
+    "G": {"color": "#6CBE45", "name": "Brooklyn-Queens Crosstown", "type": "subway"},
+    "J": {"color": "#996633", "name": "Nassau St Local", "type": "subway"},
+    "L": {"color": "#A7A9AC", "name": "14th St-Canarsie Local", "type": "subway"},
+    "M": {"color": "#FF6319", "name": "6th Ave Local", "type": "subway"},
+    "N": {"color": "#FCCC0A", "name": "Broadway Express", "type": "subway"},
+    "Q": {"color": "#FCCC0A", "name": "Broadway Express", "type": "subway"},
+    "R": {"color": "#FCCC0A", "name": "Broadway Local", "type": "subway"},
+    "W": {"color": "#FCCC0A", "name": "Broadway Local", "type": "subway"},
+    "Z": {"color": "#996633", "name": "Nassau St Express", "type": "subway"},
+    "S": {"color": "#808183", "name": "Shuttle", "type": "subway"}
+  }
+}
