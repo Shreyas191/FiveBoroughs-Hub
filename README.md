@@ -4,8 +4,6 @@
 
 FiveBoroughs-Hub serves as your intelligent companion for the New York City transit system. Merging real-time data with AI-powered assistance, it provides a seamless, modern, and accessible experience for daily commuters and tourists alike.
 
-![FiveBoroughs-Hub Dashboard](./frontend/public/vite.svg) *Add a screenshot here*
-
 ## ✨ Features
 
 - **🤖 AI Transit Assistant**: Ask questions like *"How do I get from Times Square to Brooklyn?"* or *"Are there delays on the Q line?"* and get instant, context-aware answers.
