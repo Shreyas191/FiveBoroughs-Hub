@@ -9,4 +9,3 @@ rapidfuzz==3.10.1
 
 langchain==0.3.7
 langchain-google-genai==2.0.0
-langchain-core==0.3.1
