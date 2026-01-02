@@ -1,3 +1,13 @@
+---
+title: Five Boroughs Hub
+emoji: 🚇
+colorFrom: blue
+colorTo: green
+sdk: docker
+app_port: 7860
+pinned: false
+---
+
 # 🚅 FiveBoroughs-Hub
 
 **The smartest way to navigate the NYC Subway.**
@@ -58,6 +68,12 @@ echo "OPENAI_API_KEY=your_key_here" > .env
 python app.py
 ```
 *Server will run at `http://localhost:5000`*
+
+### 3. Deployment (Hugging Face Spaces)
+This project is configured for easy deployment to **Hugging Face Spaces** using Docker.
+- **Frontend**: The React app is built and served as static files by the Python backend.
+- **Backend**: Flask serves both the API endpoints and the React frontend.
+- **Guide**: See [DEPLOYMENT.md](DEPLOYMENT.md) for full instructions.
 
 ### 2. Frontend Setup
 

@@ -10,3 +10,4 @@ langchain-google-genai==2.0.0
 
 # Let LangChain manage these
 protobuf>=4.25.1
+gunicorn

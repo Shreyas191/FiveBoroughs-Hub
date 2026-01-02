@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request, jsonify, session
+from flask import Flask, render_template, request, jsonify, session, send_from_directory
 from flask_cors import CORS
 from dotenv import load_dotenv
 import os
@@ -18,9 +18,38 @@ load_dotenv()
 setup_logging()
 logger = logging.getLogger(__name__)
 
-app = Flask(__name__)
+
+# Determine environment
+IS_PRODUCTION = os.getenv('FLASK_ENV') == 'production'
+
+if IS_PRODUCTION:
+    # In production, we serve the Vite build
+    # expected to be in 'frontend_dist'
+    app = Flask(__name__, 
+                static_folder='frontend_dist/assets', 
+                template_folder='frontend_dist',
+                static_url_path='/assets')
+else:
+    # In development, use default folders
+    app = Flask(__name__)
+
 app.secret_key = os.getenv('SECRET_KEY', secrets.token_hex(16))
 CORS(app)
+
+# Catch-all route for React Router (only in production)
+if IS_PRODUCTION:
+    @app.route('/<path:path>')
+    def catch_all(path):
+        # Allow API calls to pass through
+        if path.startswith('api/'):
+            return jsonify({'error': 'Not found'}), 404
+        # Serve static files if they exist (e.g. images in public folder)
+        # Check root of frontend_dist
+        if os.path.exists(os.path.join(app.root_path, 'frontend_dist', path)):
+            return send_from_directory('frontend_dist', path)
+            
+        # Otherwise serve index.html
+        return render_template('index.html')
 
 logger.info("="*60)
 logger.info("NYC Transit Chatbot (LangChain Edition) starting up...")
