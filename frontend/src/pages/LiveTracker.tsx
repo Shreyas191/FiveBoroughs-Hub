@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Search, ChevronRight, Clock, Navigation, Loader } from 'lucide-react';
+import { Search, ChevronRight, Navigation, Loader } from 'lucide-react';
 import { fetchStations, fetchArrivals, type Station, type Arrival } from '../services/api';
 import { motion, AnimatePresence } from 'framer-motion';
 
@@ -203,7 +203,7 @@ const LiveTracker: React.FC = () => {
                             <button onClick={goHome} className="text-sm text-[var(--text-scnd)] hover:text-white">Close</button>
                         </div>
                         <div className="max-h-[600px] overflow-y-auto">
-                            {lineData.stations.map((s, idx) => (
+                            {lineData.stations.map((s, _idx) => (
                                 <button
                                     key={s.stop_id}
                                     onClick={() => viewStation(s)}
